@@ -6,8 +6,8 @@ namespace PawnShopFiles
     {
         private int _id;
         private string _type_of_operation;
-        private int _client_id;
-        private int _emp_id;
+        private string _client_info;
+        private string _emp_info;
         private string _pawn_info;
         private int _price;
 
@@ -23,16 +23,16 @@ namespace PawnShopFiles
             set => _type_of_operation = value;
         }
 
-        public int ClientId
+        public string ClientInfo
         {
-            get => _client_id;
-            set => _client_id = value;
+            get => _client_info;
+            set => _client_info = value;
         }
 
-        public int EmpId
+        public string EmpInfo
         {
-            get => _emp_id;
-            set => _emp_id = value;
+            get => _emp_info;
+            set => _emp_info = value;
         }
 
         public string PawnInfo
@@ -47,12 +47,12 @@ namespace PawnShopFiles
             set => _price = value;
         }
         
-        public Histrory(int id, string typeOfOperation, int clientId, int empId, string pawnInfo, int price)
+        public Histrory(int id, string typeOfOperation, string clientInfo, string empInfo, string pawnInfo, int price)
         {
             _id = id;
             _type_of_operation = typeOfOperation;
-            _client_id = clientId;
-            _emp_id = empId;
+            _client_info = clientInfo;
+            _emp_info = empInfo;
             _pawn_info = pawnInfo;
             _price = price;
         }
