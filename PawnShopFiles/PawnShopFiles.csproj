@@ -47,6 +47,12 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Client.cs" />
+        <Compile Include="ClientsListForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="ClientsListForm.Designer.cs">
+          <DependentUpon>ClientsListForm.cs</DependentUpon>
+        </Compile>
         <Compile Include="Employee.cs" />
         <Compile Include="FilesManager.cs" />
         <Compile Include="Goods.cs" />
