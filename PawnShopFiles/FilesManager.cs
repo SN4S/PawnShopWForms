@@ -72,5 +72,34 @@ namespace PawnShopFiles
             }
         }
         
+        public static List<Histrory> ReadHistory(string path)
+        {
+            List<Histrory> history = new List<Histrory>();
+            using (StreamReader reader = new StreamReader(path)) 
+            {
+                var res = reader.ReadToEnd().Split('|');
+                if (res.Length - 1 < 1) return history;
+                for(int i = 0; i < res.Length-1; i++)
+                {
+                    var fields = res[i].Split('#'); 
+                    Histrory his = new Histrory(Convert.ToInt32(fields[0]), fields[1], fields[2],fields[3],fields[4],Convert.ToInt32(fields[5]),Convert.ToInt32(fields[6]));
+                    history.Add(his);
+                }
+            }
+            return history;   
+        }
+        
+        public static void WriteHistory(List<Histrory> history, string path)
+        {
+            string res = "";
+            for(int i = 0; i < history.Count; i++)
+            {
+                res += $"{history[i]}|";
+            }
+            using (StreamWriter streamWriter = new StreamWriter(path))
+            {
+                streamWriter.Write(res);
+            }
+        }
     }
 }
