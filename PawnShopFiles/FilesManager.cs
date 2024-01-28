@@ -7,7 +7,7 @@ namespace PawnShopFiles
     public class FilesManager
     {
         public string clientsFile = "clients.txt";
-        public string employeesFile = "workers.txt";
+        public string employeesFile = "employees.txt";
         public string propertyFile = "property.txt";
         public string historyFile = "history.txt";
         
