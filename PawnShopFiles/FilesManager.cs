@@ -42,5 +42,35 @@ namespace PawnShopFiles
             }
         }
         
+        public static List<Employee> ReadEmployees(string path)
+        {
+            List<Employee> employees = new List<Employee>();
+            using (StreamReader reader = new StreamReader(path)) 
+            {
+                var res = reader.ReadToEnd().Split('|');
+                if (res.Length - 1 < 1) return employees;
+                for(int i = 0; i < res.Length-1; i++)
+                {
+                    var fields = res[i].Split('#'); 
+                    Employee employee = new Employee(Convert.ToInt32(fields[0]), fields[1], fields[2],fields[3]);
+                    employees.Add(employee);
+                }
+            }
+            return employees;   
+        }
+        
+        public static void WriteEmployees(List<Employee> employees, string path)
+        {
+            string res = "";
+            for(int i = 0; i < employees.Count; i++)
+            {
+                res += $"{employees[i]}|";
+            }
+            using (StreamWriter streamWriter = new StreamWriter(path))
+            {
+                streamWriter.Write(res);
+            }
+        }
+        
     }
 }
