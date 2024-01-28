@@ -1,3 +1,5 @@
+using System;
+
 namespace PawnShopFiles
 {
     public class Realty:Property
@@ -17,7 +19,7 @@ namespace PawnShopFiles
             set => _details = value;
         }
         
-        public Realty(int id, string type, int clientId, int empId,string address,string details, int price) : base (id, type, clientId, empId, price)
+        public Realty(int id, string type, int clientId, int empId,string address,string details,int asValue, int price, DateTime dateOfOffer, int termOfCont) : base (id, type,  clientId, empId, asValue, price, dateOfOffer, termOfCont)
         {
             _address = address;
             _details = details;
