@@ -4,6 +4,7 @@ namespace PawnShopFiles
     {
         private int _id;
         private string _phone;
+        private string _address;
 
         public int Id
         {
@@ -16,10 +17,22 @@ namespace PawnShopFiles
             get => _phone;
             set => _phone = value;
         }
-        public Client(int id,string fname,string sname, string phone) : base (fname,sname)
+
+        public string Address
+        {
+            get => _address;
+            set => _address = value;
+        }
+        public Client(int id,string fname,string sname, string phone, string address) : base (fname,sname)
         {
             _id = id;
             _phone = phone;
+            _address = address;
+        }
+        
+        public override string ToString()
+        {
+            return $"{Id}#{Fname}#{Sname}#{Phone}#{Address}";
         }
     }
 }
