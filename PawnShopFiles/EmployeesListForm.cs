@@ -70,7 +70,5 @@ namespace PawnShopFiles
             }
             MessageBox.Show(@"Заповніть всі поля!");
         }
-
-        
     }
 }

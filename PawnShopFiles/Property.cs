@@ -4,14 +4,14 @@ namespace PawnShopFiles
 {
     public class Property
     {
-        protected int _id;
-        protected string _type;
-        protected int _client_id;
-        protected int _emp_id;
-        protected int _as_value;
-        protected int _price;
-        protected DateTime _date_of_offer;
-        protected int _term_of_cont;
+        private int _id;
+        private Client _client;
+        private Employee _emp;
+        private string _detail;
+        private int _as_value;
+        private int _price;
+        private DateTime _date_of_offer;
+        private int _term_of_cont;
 
         public int Id
         {
@@ -19,40 +19,63 @@ namespace PawnShopFiles
             set => _id = value;
         }
 
-        public string Type
+        public Client Client
         {
-            get => _type;
-            set => _type = value;
+            get => _client;
+            set => _client = value;
         }
 
-        public int ClientId
+        public Employee Emp
         {
-            get => _client_id;
-            set => _client_id = value;
+            get => _emp;
+            set => _emp = value;
         }
 
-        public int EmpId
+        public string Detail
         {
-            get => _emp_id;
-            set => _emp_id = value;
+            get => _detail;
+            set => _detail = value;
+        }
+
+        public int AsValue
+        {
+            get => _as_value;
+            set => _as_value=value;
         }
 
         public int Price
         {
             get => _price;
-            set => _price=value;
+            set => _price = value;
+        }
+
+        public DateTime DateOfOffer
+        {
+            get => _date_of_offer;
+            set => _date_of_offer = value;
+        }
+
+        public int TermOfCont
+        {
+            get => _term_of_cont;
+            set => _term_of_cont = value;
         }
         
-        public Property(int id, string type, int clientId, int empId, int asValue, int price, DateTime dateOfOffer, int termOfCont)
+        public Property(int id, Client client, Employee emp,string detail, int asValue, int price, DateTime dateOfOffer, int termOfCont)
         {
             _id = id;
-            _type = type;
-            _client_id = clientId;
-            _emp_id = empId;
+            _client = client;
+            _emp = emp;
+            _detail = detail;
             _price = price;
             _date_of_offer = dateOfOffer;
             _term_of_cont = termOfCont;
             _as_value = asValue;
+        }
+        
+        public override string ToString()
+        {
+            return $"{Id}#{Client.Id}#{Emp.Id}#{Detail}#{AsValue}#{Price}#{DateOfOffer}#{TermOfCont}";
         }
     }
 }
