@@ -54,71 +54,71 @@ namespace PawnShopFiles
             // 
             // fnameBox
             // 
-            this.fnameBox.Location = new System.Drawing.Point(561, 149);
+            this.fnameBox.Location = new System.Drawing.Point(561, 139);
             this.fnameBox.Name = "fnameBox";
             this.fnameBox.Size = new System.Drawing.Size(100, 20);
             this.fnameBox.TabIndex = 1;
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(561, 113);
+            this.label1.Location = new System.Drawing.Point(561, 118);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.Size = new System.Drawing.Size(100, 18);
             this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
+            this.label1.Text = "Ім\'я";
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(561, 187);
+            this.label2.Location = new System.Drawing.Point(561, 162);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 23);
             this.label2.TabIndex = 4;
-            this.label2.Text = "label2";
+            this.label2.Text = "Прізвище";
             // 
             // snameBox
             // 
-            this.snameBox.Location = new System.Drawing.Point(561, 223);
+            this.snameBox.Location = new System.Drawing.Point(561, 188);
             this.snameBox.Name = "snameBox";
             this.snameBox.Size = new System.Drawing.Size(100, 20);
             this.snameBox.TabIndex = 3;
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(561, 258);
+            this.label3.Location = new System.Drawing.Point(561, 211);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 23);
             this.label3.TabIndex = 6;
-            this.label3.Text = "label3";
+            this.label3.Text = "Адреса";
             // 
             // addressBox
             // 
-            this.addressBox.Location = new System.Drawing.Point(561, 294);
+            this.addressBox.Location = new System.Drawing.Point(561, 237);
             this.addressBox.Name = "addressBox";
             this.addressBox.Size = new System.Drawing.Size(100, 20);
             this.addressBox.TabIndex = 5;
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(561, 339);
+            this.label4.Location = new System.Drawing.Point(561, 260);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 23);
             this.label4.TabIndex = 8;
-            this.label4.Text = "label4";
+            this.label4.Text = "Номер телефону";
             // 
             // phoneBox
             // 
-            this.phoneBox.Location = new System.Drawing.Point(561, 375);
+            this.phoneBox.Location = new System.Drawing.Point(561, 286);
             this.phoneBox.Name = "phoneBox";
             this.phoneBox.Size = new System.Drawing.Size(100, 20);
             this.phoneBox.TabIndex = 7;
             // 
             // AddClientButton
             // 
-            this.AddClientButton.Location = new System.Drawing.Point(561, 435);
+            this.AddClientButton.Location = new System.Drawing.Point(561, 327);
             this.AddClientButton.Name = "AddClientButton";
-            this.AddClientButton.Size = new System.Drawing.Size(75, 23);
+            this.AddClientButton.Size = new System.Drawing.Size(100, 23);
             this.AddClientButton.TabIndex = 9;
-            this.AddClientButton.Text = "button1";
+            this.AddClientButton.Text = "Додати";
             this.AddClientButton.UseVisualStyleBackColor = true;
             this.AddClientButton.Click += new System.EventHandler(this.AddClientButton_Click);
             // 
@@ -126,7 +126,7 @@ namespace PawnShopFiles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 560);
+            this.ClientSize = new System.Drawing.Size(743, 596);
             this.Controls.Add(this.AddClientButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.phoneBox);

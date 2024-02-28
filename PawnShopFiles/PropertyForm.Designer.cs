@@ -42,23 +42,24 @@ namespace PawnShopFiles
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 109);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(756, 426);
+            this.dataGridView1.Size = new System.Drawing.Size(702, 426);
             this.dataGridView1.TabIndex = 0;
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] { "Нерухомість", "Інші товари" });
-            this.comboBox1.Location = new System.Drawing.Point(632, 82);
+            this.comboBox1.Items.AddRange(new object[] { "Усі", "Нерухомість", "Інші товари" });
+            this.comboBox1.Location = new System.Drawing.Point(720, 124);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(227, 21);
+            this.comboBox1.Size = new System.Drawing.Size(105, 21);
             this.comboBox1.TabIndex = 1;
+            this.comboBox1.Text = "Усі";
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(632, 65);
+            this.label1.Location = new System.Drawing.Point(720, 107);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 14);
+            this.label1.Size = new System.Drawing.Size(133, 14);
             this.label1.TabIndex = 2;
             this.label1.Text = "Виберіть вид майна:";
             // 

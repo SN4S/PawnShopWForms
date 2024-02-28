@@ -2,7 +2,7 @@ using System;
 
 namespace PawnShopFiles
 {
-    public class Property
+    public class Property : IStringTampering
     {
         private int _id;
         private Client _client;
@@ -71,6 +71,11 @@ namespace PawnShopFiles
             _date_of_offer = dateOfOffer;
             _term_of_cont = termOfCont;
             _as_value = asValue;
+        }
+
+        ~Property()
+        {
+            Console.WriteLine("Destructor");
         }
         
         public override string ToString()

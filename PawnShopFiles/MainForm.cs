@@ -16,5 +16,17 @@ namespace PawnShopFiles
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form form = new ClientsListForm();
+            form.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form form = new EmployeesListForm();
+            form.Show();
+        }
     }
 }

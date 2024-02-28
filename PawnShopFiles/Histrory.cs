@@ -1,8 +1,9 @@
+using System;
 using System.Net.NetworkInformation;
 
 namespace PawnShopFiles
 {
-    public class Histrory
+    public class History : IStringTampering
     {
         private int _id;
         private string _type_of_operation;
@@ -53,7 +54,7 @@ namespace PawnShopFiles
             set => _price = value;
         }
         
-        public Histrory(int id, string typeOfOperation, string clientInfo, string empInfo, string pawnInfo,int asValue, int price)
+        public History(int id, string typeOfOperation, string clientInfo, string empInfo, string pawnInfo,int asValue, int price)
         {
             _id = id;
             _type_of_operation = typeOfOperation;
@@ -62,6 +63,11 @@ namespace PawnShopFiles
             _pawn_info = pawnInfo;
             _as_value = asValue;
             _price = price;
+        }
+
+        ~History()
+        {
+            Console.WriteLine("Destructor");
         }
         
         public override string ToString()

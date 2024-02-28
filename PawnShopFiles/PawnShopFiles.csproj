@@ -84,6 +84,7 @@
         <Compile Include="PropertyForm.Designer.cs">
           <DependentUpon>PropertyForm.cs</DependentUpon>
         </Compile>
+        <Compile Include="IStringTampering.cs" />
         <EmbeddedResource Include="ClientsListForm.resx">
           <DependentUpon>ClientsListForm.cs</DependentUpon>
         </EmbeddedResource>

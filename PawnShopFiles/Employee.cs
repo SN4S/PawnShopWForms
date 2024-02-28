@@ -1,6 +1,8 @@
+using System;
+
 namespace PawnShopFiles
 {
-    public class Employee:Human
+    public class Employee:Human, IStringTampering
     {
         private int _id;
         private string _phone;
@@ -21,7 +23,11 @@ namespace PawnShopFiles
             _id = id;
             _phone = phone;
         }
-        
+
+        ~Employee()
+        {
+            Console.WriteLine("Destructor");
+        }
         public override string ToString()
         {
             return $"{Id}#{Fname}#{Sname}#{Phone}";
