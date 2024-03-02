@@ -11,12 +11,12 @@ namespace PawnShopFiles
         {
             InitializeComponent();
         }
-        private List<Histrory> _histrory = new List<Histrory>();
-
+        private List<History> _histrory = new List<History>();
+        
         public void reload()
         {
             _histrory = FilesManager.ReadHistory("history.txt");
-            InitializeTable();
+            InitializeTable(_histrory);
         }
         
         private void InitializeTable()
@@ -31,9 +31,9 @@ namespace PawnShopFiles
             historyTable.Columns.Add("price", "Ціна");
             
             historyTable.Rows.Clear();
-            if (_histrory.Count() >0)
+            if (history.Count() >0)
             {
-                foreach (var hs in _histrory)
+                foreach (var hs in history)
                 {
                     historyTable.Rows.Add(hs.Id, hs.TypeOfOperation, hs.ClientInfo, hs.EmpInfo, hs.PawnInfo, hs.AsValue, hs.Price);
                 }
