@@ -7,6 +7,7 @@ namespace PawnShopFiles
         private int _id;
         private Client _client;
         private Employee _emp;
+        private string _type;
         private string _detail;
         private int _as_value;
         private int _price;
@@ -29,6 +30,12 @@ namespace PawnShopFiles
         {
             get => _emp;
             set => _emp = value;
+        }
+
+        public string Type
+        {
+            get => _type;
+            set => _type = value;
         }
 
         public string Detail
@@ -61,11 +68,12 @@ namespace PawnShopFiles
             set => _term_of_cont = value;
         }
         
-        public Property(int id, Client client, Employee emp,string detail, int asValue, int price, DateTime dateOfOffer, int termOfCont)
+        public Property(int id, Client client, Employee emp, string type,string detail, int asValue, int price, DateTime dateOfOffer, int termOfCont)
         {
             _id = id;
             _client = client;
             _emp = emp;
+            _type = type;
             _detail = detail;
             _price = price;
             _date_of_offer = dateOfOffer;
@@ -80,7 +88,7 @@ namespace PawnShopFiles
         
         public override string ToString()
         {
-            return $"{Id}#{Client.Id}#{Emp.Id}#{Detail}#{AsValue}#{Price}#{DateOfOffer}#{TermOfCont}";
+            return $"{Id}#{Client.Id}#{Emp.Id}#{Type}#{Detail}#{AsValue}#{Price}#{DateOfOffer.ToShortDateString()}#{TermOfCont}";
         }
     }
 }
