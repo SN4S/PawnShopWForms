@@ -72,9 +72,9 @@ namespace PawnShopFiles
             }
         }
         
-        public static List<Histrory> ReadHistory(string path)
+        public static List<History> ReadHistory(string path)
         {
-            List<Histrory> history = new List<Histrory>();
+            List<History> history = new List<History>();
             using (StreamReader reader = new StreamReader(path)) 
             {
                 var res = reader.ReadToEnd().Split('|');
@@ -82,14 +82,14 @@ namespace PawnShopFiles
                 for(int i = 0; i < res.Length-1; i++)
                 {
                     var fields = res[i].Split('#'); 
-                    Histrory his = new Histrory(Convert.ToInt32(fields[0]), fields[1], fields[2],fields[3],fields[4],Convert.ToInt32(fields[5]),Convert.ToInt32(fields[6]));
+                    History his = new History(Convert.ToInt32(fields[0]), fields[1], fields[2],fields[3],fields[4],Convert.ToInt32(fields[5]),Convert.ToInt32(fields[6]), Convert.ToDateTime(fields[7]));
                     history.Add(his);
                 }
             }
             return history;   
         }
         
-        public static void WriteHistory(List<Histrory> history, string path)
+        public static void WriteHistory(List<History> history, string path)
         {
             string res = "";
             for(int i = 0; i < history.Count; i++)
@@ -114,7 +114,7 @@ namespace PawnShopFiles
                     var fields = res[i].Split('#'); 
                     var resultClient = clientsList.Where(client => client.Id == Convert.ToInt32(fields[1])).ToList();
                     var resultEmp = employees.Where(emp => emp.Id == Convert.ToInt32(fields[2])).ToList();
-                    Property prop = new Property(Convert.ToInt32(fields[0]), resultClient[0], resultEmp[0],fields[3],Convert.ToInt32(fields[4]),Convert.ToInt32(fields[5]),Convert.ToDateTime(fields[6]),Convert.ToInt32(fields[7]));
+                    Property prop = new Property(Convert.ToInt32(fields[0]), resultClient[0], resultEmp[0],fields[3],fields[4],Convert.ToInt32(fields[5]),Convert.ToInt32(fields[6]),Convert.ToDateTime(fields[7]),Convert.ToInt32(fields[8]));
                     props.Add(prop);
                 }
             }
