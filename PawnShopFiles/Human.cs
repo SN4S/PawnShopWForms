@@ -1,3 +1,5 @@
+using System;
+
 namespace PawnShopFiles
 {
     public class Human
@@ -21,6 +23,11 @@ namespace PawnShopFiles
         {
             this._fname = fname;
             this._sname = sname;
+        }
+
+        ~Human()
+        {
+            Console.WriteLine("DEstroy");
         }
     }
 }
