@@ -6,12 +6,13 @@ namespace PawnShopFiles
     public class History : IStringTampering
     {
         private int _id;
-        private string _type_of_operation;
+        private OperType _type_of_operation;
         private string _client_info;
         private string _emp_info;
         private string _pawn_info;
         private int _as_value;
         private int _price;
+        private DateTime _date_of_operation;
 
         public int Id
         {
@@ -19,7 +20,7 @@ namespace PawnShopFiles
             set => _id = value;
         }
 
-        public string TypeOfOperation
+        public OperType TypeOfOperation
         {
             get => _type_of_operation;
             set => _type_of_operation = value;
@@ -53,16 +54,26 @@ namespace PawnShopFiles
             get => _price;
             set => _price = value;
         }
+
+        public DateTime DateOfOperation
+        {
+            get => _date_of_operation;
+            set => _date_of_operation = value;
+        }
         
-        public History(int id, string typeOfOperation, string clientInfo, string empInfo, string pawnInfo,int asValue, int price)
+        public History(int id, string typeOfOperation, string clientInfo, string empInfo, string pawnInfo,int asValue, int price, DateTime dateOfOperation)
         {
             _id = id;
-            _type_of_operation = typeOfOperation;
+            if (Enum.TryParse(typeOfOperation, out OperType operType))
+            {
+                _type_of_operation = operType;
+            }
             _client_info = clientInfo;
             _emp_info = empInfo;
             _pawn_info = pawnInfo;
             _as_value = asValue;
             _price = price;
+            _date_of_operation = dateOfOperation;
         }
 
         ~History()
@@ -72,7 +83,7 @@ namespace PawnShopFiles
         
         public override string ToString()
         {
-            return $"{Id}#{TypeOfOperation}#{ClientInfo}#{EmpInfo}#{PawnInfo}#{AsValue}#{Price}";
+            return $"{Id}#{TypeOfOperation}#{ClientInfo}#{EmpInfo}#{PawnInfo}#{AsValue}#{Price}#{DateOfOperation.ToShortDateString()}";
         }
     }
 }
