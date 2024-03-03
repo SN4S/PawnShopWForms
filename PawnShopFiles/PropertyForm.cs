@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO.Pipes;
 using System.Linq;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace PawnShopFiles
 {
@@ -285,10 +286,35 @@ namespace PawnShopFiles
                 MessageBox.Show(@"Майно з таким ідентифікатором не існує");
             }
         }
-
+        
         private void button5_Click(object sender, EventArgs e)
         {
-            
+            var addedProp = _propertiesList.Where(prop => prop.Id == numericUpDown9.Value).ToList();
+            if (addedProp.Count != 0)
+            {
+                var prop = addedProp.First();
+                var enddate = prop.DateOfOffer.AddDays(Convert.ToDouble(prop.TermOfCont));
+                if (prop.Client.Id == Convert.ToInt32(comboBox1.Text.Split('.')[0]))
+                {
+                    _propertiesList.RemoveAll(pr => pr.Id == numericUpDown9.Value);
+                    FilesManager.WriteProperty(_propertiesList, "property.txt");
+                    MessageBox.Show("Повернуто оригінальному власнику");
+                    reload();
+                }
+                else if(enddate<DateTime.Now){
+                    if (MessageBox.Show("Ви впевнені?", "Точно хочете продати?", MessageBoxButtons.YesNo,
+                                            MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            _propertiesList.RemoveAll(pr => pr.Id == numericUpDown9.Value);
+                            FilesManager.WriteProperty(_propertiesList, "property.txt");
+                            reload();
+                        }
+                }
+            }
+            else
+            {
+                MessageBox.Show(@"Майно з таким ідентифікатором не існує");
+            }
         }
 
         private void button8_Click(object sender, EventArgs e)
