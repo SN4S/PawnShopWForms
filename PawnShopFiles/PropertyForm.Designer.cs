@@ -87,6 +87,18 @@ namespace PawnShopFiles
             this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.numericUpDown9 = new System.Windows.Forms.NumericUpDown();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -100,6 +112,8 @@ namespace PawnShopFiles
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -130,7 +144,7 @@ namespace PawnShopFiles
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(3, 102);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(172, 21);
+            this.comboBox3.Size = new System.Drawing.Size(147, 21);
             this.comboBox3.TabIndex = 4;
             this.comboBox3.Text = "Виберіть";
             // 
@@ -159,7 +173,7 @@ namespace PawnShopFiles
             this.comboBox1.Items.AddRange(new object[] { "Нерухомість", "Предмети" });
             this.comboBox1.Location = new System.Drawing.Point(3, 144);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(172, 21);
+            this.comboBox1.Size = new System.Drawing.Size(147, 21);
             this.comboBox1.TabIndex = 6;
             this.comboBox1.Text = "Виберіть";
             // 
@@ -284,6 +298,8 @@ namespace PawnShopFiles
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button8);
+            this.panel2.Controls.Add(this.button7);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.comboBox2);
             this.panel2.Controls.Add(this.addButton);
@@ -393,6 +409,8 @@ namespace PawnShopFiles
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.button10);
+            this.panel3.Controls.Add(this.button9);
             this.panel3.Controls.Add(this.numericUpDown8);
             this.panel3.Controls.Add(this.label24);
             this.panel3.Controls.Add(this.label13);
@@ -450,7 +468,7 @@ namespace PawnShopFiles
             this.comboBox6.FormattingEnabled = true;
             this.comboBox6.Location = new System.Drawing.Point(3, 101);
             this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(172, 21);
+            this.comboBox6.Size = new System.Drawing.Size(145, 21);
             this.comboBox6.TabIndex = 3;
             this.comboBox6.Text = "Виберіть";
             // 
@@ -469,7 +487,7 @@ namespace PawnShopFiles
             this.comboBox7.FormattingEnabled = true;
             this.comboBox7.Location = new System.Drawing.Point(3, 143);
             this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(172, 21);
+            this.comboBox7.Size = new System.Drawing.Size(145, 21);
             this.comboBox7.TabIndex = 4;
             this.comboBox7.Text = "Виберіть";
             // 
@@ -598,7 +616,7 @@ namespace PawnShopFiles
             this.panel4.Controls.Add(this.numericUpDown7);
             this.panel4.Controls.Add(this.label23);
             this.panel4.Controls.Add(this.label22);
-            this.panel4.Location = new System.Drawing.Point(547, 542);
+            this.panel4.Location = new System.Drawing.Point(548, 543);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(166, 127);
             this.panel4.TabIndex = 31;
@@ -616,9 +634,12 @@ namespace PawnShopFiles
             // numericUpDown7
             // 
             this.numericUpDown7.Location = new System.Drawing.Point(3, 47);
+            this.numericUpDown7.Maximum = new decimal(new int[] { -1486618624, 232830643, 0, 0 });
+            this.numericUpDown7.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             this.numericUpDown7.Name = "numericUpDown7";
             this.numericUpDown7.Size = new System.Drawing.Size(148, 20);
             this.numericUpDown7.TabIndex = 29;
+            this.numericUpDown7.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // label23
             // 
@@ -637,11 +658,124 @@ namespace PawnShopFiles
             this.label22.TabIndex = 27;
             this.label22.Text = "Видалення";
             // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.button6);
+            this.panel5.Controls.Add(this.comboBox9);
+            this.panel5.Controls.Add(this.label27);
+            this.panel5.Controls.Add(this.button5);
+            this.panel5.Controls.Add(this.numericUpDown9);
+            this.panel5.Controls.Add(this.label25);
+            this.panel5.Controls.Add(this.label26);
+            this.panel5.Location = new System.Drawing.Point(376, 543);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(166, 155);
+            this.panel5.TabIndex = 32;
+            // 
+            // comboBox9
+            // 
+            this.comboBox9.FormattingEnabled = true;
+            this.comboBox9.Location = new System.Drawing.Point(3, 90);
+            this.comboBox9.Name = "comboBox9";
+            this.comboBox9.Size = new System.Drawing.Size(130, 21);
+            this.comboBox9.TabIndex = 31;
+            this.comboBox9.Text = "Виберіть";
+            // 
+            // label27
+            // 
+            this.label27.Location = new System.Drawing.Point(3, 72);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(130, 15);
+            this.label27.TabIndex = 32;
+            this.label27.Text = "Клієнт";
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(3, 129);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(160, 23);
+            this.button5.TabIndex = 30;
+            this.button5.Text = "Видати";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDown9
+            // 
+            this.numericUpDown9.Location = new System.Drawing.Point(3, 47);
+            this.numericUpDown9.Maximum = new decimal(new int[] { -1530494976, 232830, 0, 0 });
+            this.numericUpDown9.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            this.numericUpDown9.Name = "numericUpDown9";
+            this.numericUpDown9.Size = new System.Drawing.Size(160, 20);
+            this.numericUpDown9.TabIndex = 29;
+            this.numericUpDown9.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            // 
+            // label25
+            // 
+            this.label25.Location = new System.Drawing.Point(3, 31);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(100, 23);
+            this.label25.TabIndex = 28;
+            this.label25.Text = "ID Майна";
+            // 
+            // label26
+            // 
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label26.Location = new System.Drawing.Point(3, 7);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(130, 23);
+            this.label26.TabIndex = 27;
+            this.label26.Text = "Видача";
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(139, 90);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(23, 21);
+            this.button6.TabIndex = 33;
+            this.button6.Text = "+";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(156, 102);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(23, 21);
+            this.button7.TabIndex = 34;
+            this.button7.Text = "+";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(156, 143);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(23, 21);
+            this.button8.TabIndex = 35;
+            this.button8.Text = "+";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(152, 101);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(23, 21);
+            this.button9.TabIndex = 36;
+            this.button9.Text = "+";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(152, 143);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(23, 21);
+            this.button10.TabIndex = 37;
+            this.button10.Text = "+";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
             // PropertyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1102, 682);
+            this.ClientSize = new System.Drawing.Size(1102, 710);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.button2);
@@ -673,9 +807,25 @@ namespace PawnShopFiles
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
+
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.NumericUpDown numericUpDown9;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.ComboBox comboBox9;
+        private System.Windows.Forms.Label label27;
 
         private System.Windows.Forms.NumericUpDown numericUpDown8;
         private System.Windows.Forms.Label label24;

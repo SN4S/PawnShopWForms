@@ -86,6 +86,12 @@ namespace PawnShopFiles
             }
             comboBox2.Items.Clear();
             comboBox2.Items.AddRange(names);
+            
+            comboBox6.Items.Clear();
+            comboBox6.Items.AddRange(names);
+            
+            comboBox9.Items.Clear();
+            comboBox9.Items.AddRange(names);
         }
         private void InitializeEmployeesCombobox()
         {
@@ -98,6 +104,9 @@ namespace PawnShopFiles
             }
             comboBox3.Items.Clear();
             comboBox3.Items.AddRange(names);
+            
+            comboBox7.Items.Clear();
+            comboBox7.Items.AddRange(names);
         }
 
         private void PropertyForm_Load(object sender, EventArgs e)
@@ -256,6 +265,11 @@ namespace PawnShopFiles
             {
                 MessageBox.Show(@"Майно з таким ідентифікатором не існує");
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
