@@ -46,6 +46,18 @@
         <Reference Include="System.Xml"/>
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="AddClientForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="AddClientForm.Designer.cs">
+          <DependentUpon>AddClientForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="AddEmployeesForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="AddEmployeesForm.Designer.cs">
+          <DependentUpon>AddEmployeesForm.cs</DependentUpon>
+        </Compile>
         <Compile Include="Client.cs" />
         <Compile Include="ClientsListForm.cs">
           <SubType>Form</SubType>
@@ -86,6 +98,12 @@
           <DependentUpon>PropertyForm.cs</DependentUpon>
         </Compile>
         <Compile Include="IStringTampering.cs" />
+        <EmbeddedResource Include="AddClientForm.resx">
+          <DependentUpon>AddClientForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="AddEmployeesForm.resx">
+          <DependentUpon>AddEmployeesForm.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="ClientsListForm.resx">
           <DependentUpon>ClientsListForm.cs</DependentUpon>
         </EmbeddedResource>

@@ -93,6 +93,25 @@ namespace PawnShopFiles
             comboBox9.Items.Clear();
             comboBox9.Items.AddRange(names);
         }
+
+        public void addNewEmpToComboboxes(Employee employee)
+        {
+            comboBox7.Items.Add($"{employee.Id}. {employee.Fname} {employee.Sname} ({employee.Phone})");
+            comboBox3.Items.Add($"{employee.Id}. {employee.Fname} {employee.Sname} ({employee.Phone})");
+            comboBox3.Text = $"{employee.Id}. {employee.Fname} {employee.Sname} ({employee.Phone})";
+            comboBox7.Text = $"{employee.Id}. {employee.Fname} {employee.Sname} ({employee.Phone})";
+        }
+
+        public void addNewClientToCombo(Client client)
+        {
+            comboBox2.Items.Add($"{client.Id}. {client.Fname} {client.Sname} ({client.Phone})");
+            comboBox6.Items.Add($"{client.Id}. {client.Fname} {client.Sname} ({client.Phone})");
+            comboBox9.Items.Add($"{client.Id}. {client.Fname} {client.Sname} ({client.Phone})");
+            comboBox2.Text = $"{client.Id}. {client.Fname} {client.Sname} ({client.Phone})";
+            comboBox6.Text = $"{client.Id}. {client.Fname} {client.Sname} ({client.Phone})";
+            comboBox9.Text = $"{client.Id}. {client.Fname} {client.Sname} ({client.Phone})";
+
+        }
         private void InitializeEmployeesCombobox()
         {
             object[] names = new object[_employeesList.Count];
@@ -270,6 +289,61 @@ namespace PawnShopFiles
         private void button5_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            AddEmployeesForm form = Application.OpenForms.OfType<AddEmployeesForm>().FirstOrDefault();
+            if (form != null) form.Focus();
+            else
+            {
+                Form form1 = new AddEmployeesForm(); 
+                form1.Show();
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            AddEmployeesForm form = Application.OpenForms.OfType<AddEmployeesForm>().FirstOrDefault();
+            if (form != null) form.Focus();
+            else
+            {
+                Form form1 = new AddEmployeesForm(); 
+                form1.Show();
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            AddClientForm form = Application.OpenForms.OfType<AddClientForm>().FirstOrDefault();
+            if (form != null) form.Focus();
+            else
+            {
+                Form form1 = new AddClientForm(); 
+                form1.Show();
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            AddClientForm form = Application.OpenForms.OfType<AddClientForm>().FirstOrDefault();
+            if (form != null) form.Focus();
+            else
+            {
+                Form form1 = new AddClientForm(); 
+                form1.Show();
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            AddClientForm form = Application.OpenForms.OfType<AddClientForm>().FirstOrDefault();
+            if (form != null) form.Focus();
+            else
+            {
+                Form form1 = new AddClientForm(); 
+                form1.Show();
+            }
         }
     }
 }

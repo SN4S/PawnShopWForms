@@ -66,7 +66,7 @@ namespace PawnShopFiles
 
             if (snameBox.Text != "" && fnameBox.Text != "" && phoneBox.Text.Length == 18)
             {
-                Employee employee = new Employee(lastId+1, snameBox.Text, snameBox.Text, phoneBox.Text);
+                Employee employee = new Employee(lastId+1, fnameBox.Text, snameBox.Text, phoneBox.Text);
                 _employeesList.Add(employee);
                 FilesManager.WriteEmployees(_employeesList, "employees.txt");
                 InitializeTable(_employeesList);

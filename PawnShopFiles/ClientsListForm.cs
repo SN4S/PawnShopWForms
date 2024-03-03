@@ -63,10 +63,9 @@ namespace PawnShopFiles
                 MessageBox.Show(@"Клієнт з таким номером телефону вже існує");
                 return;
             }
-            MessageBox.Show(phoneBox.Text.Length.ToString());
             if (snameBox.Text != "" && fnameBox.Text != "" && phoneBox.Text.Length == 18 && addressBox.Text != "")
             {
-                Client clients = new Client(lastId+1, snameBox.Text, snameBox.Text, phoneBox.Text, addressBox.Text);
+                Client clients = new Client(lastId+1, fnameBox.Text, snameBox.Text, phoneBox.Text, addressBox.Text);
                 _clientsList.Add(clients);
                 FilesManager.WriteClients(_clientsList, "clients.txt");
                 InitializeTable(_clientsList);
