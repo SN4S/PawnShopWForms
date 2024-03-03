@@ -18,9 +18,9 @@ namespace PawnShopFiles
 
         public void reload()
         {
-            _propertiesList = FilesManager.ReadProperty(_clientsList,_employeesList,"property.txt");
             _clientsList = FilesManager.ReadClients("clients.txt");
             _employeesList = FilesManager.ReadEmployees("employees.txt");
+            _propertiesList = FilesManager.ReadProperty(_clientsList,_employeesList,"property.txt");
             InitializeTable(_employeesList);
         }
 
