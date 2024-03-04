@@ -305,54 +305,64 @@ namespace PawnShopFiles
             int lastHId;
             if (addedProp.Count != 0)
             {
-                if (_historyList.Count() > 0)
-                    lastHId = _historyList.Last().Id;
-                else lastHId = 0;
-                
-                var prop = addedProp.First();
-                var enddate = prop.DateOfOffer.AddDays(Convert.ToDouble(prop.TermOfCont));
-                if (prop.Client.Id == Convert.ToInt32(comboBox9.Text.Split('.')[0]))
+                if (comboBox9.Text != "Виберіть" && comboBox10.Text != "Виберіть")
                 {
-                    _propertiesList.RemoveAll(pr => pr.Id == numericUpDown9.Value);
-                    var clients = _clientsList.First(client =>
-                        client.Id == Convert.ToInt32(comboBox9.Text.Split('.')[0]));
-                    var employee = _employeesList.First(em =>
-                        em.Id == Convert.ToInt32(comboBox10.Text.Split('.')[0]));
-                    
-                    History his = new History(lastHId+1, "2",$"{clients.Fname} {clients.Sname} - {clients.Address} ({clients.Phone})",$"{employee.Fname} {employee.Sname} ({employee.Phone})",$"{prop.Type} -- {prop.Detail} - ID {prop.Id}",prop.AsValue,prop.Price,DateTime.Today);
-                    _historyList.Add(his);
-                    FilesManager.WriteProperty(_propertiesList, "property.txt");
-                    FilesManager.WriteHistory(_historyList, "history.txt");
-                    MessageBox.Show("Повернуто оригінальному власнику");
-                    HistoryForm form = Application.OpenForms.OfType<HistoryForm>().FirstOrDefault();
-                    if (form != null) form.reload();
-                    reload();
-                }
-                else if (enddate < DateTime.Now)
-                {
-                    if (MessageBox.Show("Ви впевнені?", "Точно хочете продати?", MessageBoxButtons.YesNo,
-                            MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (_historyList.Count() > 0)
+                        lastHId = _historyList.Last().Id;
+                    else lastHId = 0;
+
+                    var prop = addedProp.First();
+                    var enddate = prop.DateOfOffer.AddDays(Convert.ToDouble(prop.TermOfCont));
+                    if (prop.Client.Id == Convert.ToInt32(comboBox9.Text.Split('.')[0]))
                     {
+                        _propertiesList.RemoveAll(pr => pr.Id == numericUpDown9.Value);
                         var clients = _clientsList.First(client =>
                             client.Id == Convert.ToInt32(comboBox9.Text.Split('.')[0]));
                         var employee = _employeesList.First(em =>
                             em.Id == Convert.ToInt32(comboBox10.Text.Split('.')[0]));
 
-                        History his = new History(lastHId+1, "0",
+                        History his = new History(lastHId + 1, "2",
                             $"{clients.Fname} {clients.Sname} - {clients.Address} ({clients.Phone})",
                             $"{employee.Fname} {employee.Sname} ({employee.Phone})",
                             $"{prop.Type} -- {prop.Detail} - ID {prop.Id}", prop.AsValue, prop.Price, DateTime.Today);
                         _historyList.Add(his);
-                        _propertiesList.RemoveAll(pr => pr.Id == numericUpDown9.Value);
                         FilesManager.WriteProperty(_propertiesList, "property.txt");
+                        FilesManager.WriteHistory(_historyList, "history.txt");
+                        MessageBox.Show("Повернуто оригінальному власнику");
                         HistoryForm form = Application.OpenForms.OfType<HistoryForm>().FirstOrDefault();
                         if (form != null) form.reload();
                         reload();
                     }
+                    else if (enddate < DateTime.Now)
+                    {
+                        if (MessageBox.Show("Ви впевнені?", "Точно хочете продати?", MessageBoxButtons.YesNo,
+                                MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            var clients = _clientsList.First(client =>
+                                client.Id == Convert.ToInt32(comboBox9.Text.Split('.')[0]));
+                            var employee = _employeesList.First(em =>
+                                em.Id == Convert.ToInt32(comboBox10.Text.Split('.')[0]));
+
+                            History his = new History(lastHId + 1, "0",
+                                $"{clients.Fname} {clients.Sname} - {clients.Address} ({clients.Phone})",
+                                $"{employee.Fname} {employee.Sname} ({employee.Phone})",
+                                $"{prop.Type} -- {prop.Detail} - ID {prop.Id}", prop.AsValue, prop.Price,
+                                DateTime.Today);
+                            _historyList.Add(his);
+                            _propertiesList.RemoveAll(pr => pr.Id == numericUpDown9.Value);
+                            FilesManager.WriteProperty(_propertiesList, "property.txt");
+                            FilesManager.WriteHistory(_historyList, "history.txt");
+                            HistoryForm form = Application.OpenForms.OfType<HistoryForm>().FirstOrDefault();
+                            if (form != null) form.reload();
+                            reload();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ви ще не можете продати це майно");
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Ви ще не можете продати це майно");};
+                else MessageBox.Show("Заповніть всі поля");
             }
             else
             {
