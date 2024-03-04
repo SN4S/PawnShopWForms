@@ -3,7 +3,8 @@ namespace PawnShopFiles
     public enum OperType
     {
         Sell,
-        Buy
+        Buy,
+        Return
     }
 
     public enum PropertyType

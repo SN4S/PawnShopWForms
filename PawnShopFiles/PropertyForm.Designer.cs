@@ -92,6 +92,9 @@ namespace PawnShopFiles
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.button11 = new System.Windows.Forms.Button();
+            this.comboBox10 = new System.Windows.Forms.ComboBox();
+            this.label28 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.comboBox9 = new System.Windows.Forms.ComboBox();
             this.label27 = new System.Windows.Forms.Label();
@@ -700,6 +703,9 @@ namespace PawnShopFiles
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.button11);
+            this.panel5.Controls.Add(this.comboBox10);
+            this.panel5.Controls.Add(this.label28);
             this.panel5.Controls.Add(this.button6);
             this.panel5.Controls.Add(this.comboBox9);
             this.panel5.Controls.Add(this.label27);
@@ -709,8 +715,34 @@ namespace PawnShopFiles
             this.panel5.Controls.Add(this.label26);
             this.panel5.Location = new System.Drawing.Point(376, 543);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(166, 155);
+            this.panel5.Size = new System.Drawing.Size(166, 205);
             this.panel5.TabIndex = 32;
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(140, 133);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(23, 21);
+            this.button11.TabIndex = 40;
+            this.button11.Text = "+";
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // comboBox10
+            // 
+            this.comboBox10.FormattingEnabled = true;
+            this.comboBox10.Location = new System.Drawing.Point(3, 134);
+            this.comboBox10.Name = "comboBox10";
+            this.comboBox10.Size = new System.Drawing.Size(130, 21);
+            this.comboBox10.TabIndex = 38;
+            this.comboBox10.Text = "Виберіть";
+            // 
+            // label28
+            // 
+            this.label28.Location = new System.Drawing.Point(5, 116);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(100, 15);
+            this.label28.TabIndex = 39;
+            this.label28.Text = "Працівник";
             // 
             // button6
             // 
@@ -741,7 +773,7 @@ namespace PawnShopFiles
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(3, 129);
+            this.button5.Location = new System.Drawing.Point(3, 179);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(160, 23);
             this.button5.TabIndex = 30;
@@ -780,7 +812,7 @@ namespace PawnShopFiles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1102, 710);
+            this.ClientSize = new System.Drawing.Size(1102, 760);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -818,6 +850,10 @@ namespace PawnShopFiles
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.ComboBox comboBox10;
+        private System.Windows.Forms.Label label28;
 
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;

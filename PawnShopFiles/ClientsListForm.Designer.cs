@@ -478,6 +478,7 @@ namespace PawnShopFiles
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.EditSwitchButton);
             this.Controls.Add(this.clientsTable);
+            this.KeyPreview = true;
             this.Name = "ClientsListForm";
             this.Text = "Клієнти";
             this.Load += new System.EventHandler(this.ClientsListForm_Load);

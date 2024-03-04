@@ -43,7 +43,8 @@ namespace PawnShopFiles
                     _employeesList.Add(employee);
                     FilesManager.WriteEmployees(_employeesList, "employees.txt");
                     PropertyForm form = Application.OpenForms.OfType<PropertyForm>().FirstOrDefault();
-                    if (form != null) form.addNewEmpToComboboxes(employee);
+                    if (form != null)
+                    {form.reload();form.addNewEmpToComboboxes(employee);}
                     MessageBox.Show(@"Додано");
                     Close();
                     return;

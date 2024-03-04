@@ -35,7 +35,7 @@ namespace PawnShopFiles
                 _clientsList.Add(clients);
                 FilesManager.WriteClients(_clientsList, "clients.txt");
                 PropertyForm form = Application.OpenForms.OfType<PropertyForm>().FirstOrDefault();
-                if (form != null) form.addNewClientToCombo(clients);
+                if (form != null) {form.reload(); form.addNewClientToCombo(clients);}
                 MessageBox.Show(@"Додано");  
                 Close();
                 return;
