@@ -60,7 +60,7 @@ namespace PawnShopFiles
             }
             if (addedClients.Count != 0)
             {
-                MessageBox.Show(@"Клієнт з таким номером телефону вже існує");
+                MessageBox.Show(@"Клієнт з таким номером телефону вже існує","Помилка");
                 return;
             }
             if (snameBox.Text != "" && fnameBox.Text != "" && phoneBox.Text.Length == 18 && addressBox.Text != "")
@@ -221,7 +221,7 @@ namespace PawnShopFiles
             }
             else
             {
-                MessageBox.Show(@"Клієнт з таким ідентифікатором ее існує");
+                MessageBox.Show(@"Клієнт з таким ідентифікатором ее існує","Помилка");
             }
             
         }
@@ -248,7 +248,7 @@ namespace PawnShopFiles
             }
             else
             {
-                MessageBox.Show(@"Клієнт з таким ідентифікатором ее існує");
+                MessageBox.Show(@"Клієнт з таким ідентифікатором не існує","Помилка");
             }
         }
 

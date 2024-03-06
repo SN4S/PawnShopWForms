@@ -102,6 +102,15 @@ namespace PawnShopFiles
             this.numericUpDown9 = new System.Windows.Forms.NumericUpDown();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.менюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.клієнтиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.працівникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.історіяОпераційToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.проДодатокToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.інструкціяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.проПрограмуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -117,6 +126,7 @@ namespace PawnShopFiles
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -156,15 +166,15 @@ namespace PawnShopFiles
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
             this.panel1.Controls.Add(this.label5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 24);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1102, 103);
+            this.panel1.Size = new System.Drawing.Size(1102, 79);
             this.panel1.TabIndex = 5;
             // 
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(12, 20);
+            this.label5.Location = new System.Drawing.Point(12, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(421, 60);
             this.label5.TabIndex = 16;
@@ -808,6 +818,73 @@ namespace PawnShopFiles
             this.label26.TabIndex = 27;
             this.label26.Text = "Видача";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { this.менюToolStripMenuItem, this.проДодатокToolStripMenuItem });
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1102, 24);
+            this.menuStrip1.TabIndex = 33;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // менюToolStripMenuItem
+            // 
+            this.менюToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.клієнтиToolStripMenuItem, this.працівникиToolStripMenuItem, this.історіяОпераційToolStripMenuItem });
+            this.менюToolStripMenuItem.Name = "менюToolStripMenuItem";
+            this.менюToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.менюToolStripMenuItem.Text = "Меню";
+            // 
+            // клієнтиToolStripMenuItem
+            // 
+            this.клієнтиToolStripMenuItem.Name = "клієнтиToolStripMenuItem";
+            this.клієнтиToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
+            this.клієнтиToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
+            this.клієнтиToolStripMenuItem.Text = "Клієнти";
+            this.клієнтиToolStripMenuItem.Click += new System.EventHandler(this.клієнтиToolStripMenuItem_Click);
+            // 
+            // працівникиToolStripMenuItem
+            // 
+            this.працівникиToolStripMenuItem.Name = "працівникиToolStripMenuItem";
+            this.працівникиToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
+            this.працівникиToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
+            this.працівникиToolStripMenuItem.Text = "Працівники";
+            this.працівникиToolStripMenuItem.Click += new System.EventHandler(this.працівникиToolStripMenuItem_Click);
+            // 
+            // історіяОпераційToolStripMenuItem
+            // 
+            this.історіяОпераційToolStripMenuItem.Name = "історіяОпераційToolStripMenuItem";
+            this.історіяОпераційToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
+            this.історіяОпераційToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
+            this.історіяОпераційToolStripMenuItem.Text = "Історія операцій";
+            this.історіяОпераційToolStripMenuItem.Click += new System.EventHandler(this.історіяОпераційToolStripMenuItem_Click);
+            // 
+            // проДодатокToolStripMenuItem
+            // 
+            this.проДодатокToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.інструкціяToolStripMenuItem, this.toolStripSeparator1, this.проПрограмуToolStripMenuItem });
+            this.проДодатокToolStripMenuItem.Name = "проДодатокToolStripMenuItem";
+            this.проДодатокToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.проДодатокToolStripMenuItem.Text = "Допомога";
+            // 
+            // інструкціяToolStripMenuItem
+            // 
+            this.інструкціяToolStripMenuItem.Name = "інструкціяToolStripMenuItem";
+            this.інструкціяToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
+            this.інструкціяToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.інструкціяToolStripMenuItem.Text = "Інструкція";
+            this.інструкціяToolStripMenuItem.Click += new System.EventHandler(this.інструкціяToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(151, 6);
+            // 
+            // проПрограмуToolStripMenuItem
+            // 
+            this.проПрограмуToolStripMenuItem.Name = "проПрограмуToolStripMenuItem";
+            this.проПрограмуToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.проПрограмуToolStripMenuItem.Text = "Про програму";
+            this.проПрограмуToolStripMenuItem.Click += new System.EventHandler(this.проПрограмуToolStripMenuItem_Click);
+            // 
             // PropertyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -827,6 +904,8 @@ namespace PawnShopFiles
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "PropertyForm";
             this.Text = "Майно";
             this.Load += new System.EventHandler(this.PropertyForm_Load);
@@ -847,9 +926,23 @@ namespace PawnShopFiles
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.ToolStripMenuItem проДодатокToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem інструкціяToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem проПрограмуToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem клієнтиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem працівникиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem історіяОпераційToolStripMenuItem;
+
+        private System.Windows.Forms.ToolStripMenuItem менюToolStripMenuItem;
+
+        private System.Windows.Forms.MenuStrip menuStrip1;
 
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.ComboBox comboBox10;

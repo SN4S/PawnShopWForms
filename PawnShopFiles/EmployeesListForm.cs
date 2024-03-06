@@ -60,7 +60,7 @@ namespace PawnShopFiles
             }
             if (addedEmployees.Count != 0)
             {
-                MessageBox.Show(@"Працівник з таким номером телефону вже існує");
+                MessageBox.Show(@"Працівник з таким номером телефону вже існує","Помилка");
                 return;
             }
 
@@ -215,7 +215,7 @@ namespace PawnShopFiles
             }
             else
             {
-                MessageBox.Show(@"Працівник з таким ідентифікатором ее існує");
+                MessageBox.Show(@"Працівник з таким ідентифікатором ее існує","Помилка");
             }
             
         }
@@ -242,7 +242,7 @@ namespace PawnShopFiles
             }
             else
             {
-                MessageBox.Show(@"Клієнт з таким ідентифікатором ее існує");
+                MessageBox.Show(@"Клієнт з таким ідентифікатором ее існує","Помилка");
             }
         }
     }

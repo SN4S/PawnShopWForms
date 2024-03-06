@@ -33,7 +33,7 @@ namespace PawnShopFiles
                 }
                 if (addedEmployees.Count != 0)
                 {
-                    MessageBox.Show(@"Працівник з таким номером телефону вже існує");
+                    MessageBox.Show(@"Працівник з таким номером телефону вже існує","Помилка");
                     return;
                 }
 

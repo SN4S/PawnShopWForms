@@ -26,7 +26,7 @@ namespace PawnShopFiles
             }
             if (addedClients.Count != 0)
             {
-                MessageBox.Show(@"Клієнт з таким номером телефону вже існує");
+                MessageBox.Show(@"Клієнт з таким номером телефону вже існує","Помилка");
                 return;
             };
             if (snameBox.Text != "" && fnameBox.Text != "" && phoneBox.Text.Length == 18 && addressBox.Text != "")
