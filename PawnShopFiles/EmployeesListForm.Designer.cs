@@ -81,6 +81,8 @@ namespace PawnShopFiles
             // 
             this.employeesTable.AllowUserToAddRows = false;
             this.employeesTable.AllowUserToDeleteRows = false;
+            this.employeesTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.employeesTable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.employeesTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.employeesTable.Location = new System.Drawing.Point(21, 111);
             this.employeesTable.Name = "employeesTable";

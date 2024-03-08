@@ -31,6 +31,7 @@ namespace PawnShopFiles
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -126,6 +127,14 @@ namespace PawnShopFiles
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Location = new System.Drawing.Point(12, 109);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -261,9 +270,9 @@ namespace PawnShopFiles
             // 
             this.label6.Location = new System.Drawing.Point(5, 297);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(100, 15);
+            this.label6.Size = new System.Drawing.Size(117, 15);
             this.label6.TabIndex = 16;
-            this.label6.Text = "Оціночна вартість";
+            this.label6.Text = "Оціночна вартість, $";
             // 
             // label7
             // 
@@ -271,7 +280,7 @@ namespace PawnShopFiles
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(100, 15);
             this.label7.TabIndex = 17;
-            this.label7.Text = "Ціна";
+            this.label7.Text = "Ціна, $";
             // 
             // label8
             // 
@@ -574,7 +583,7 @@ namespace PawnShopFiles
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(100, 15);
             this.label16.TabIndex = 17;
-            this.label16.Text = "Ціна";
+            this.label16.Text = "Ціна, $";
             // 
             // numericUpDown4
             // 
@@ -590,9 +599,9 @@ namespace PawnShopFiles
             // 
             this.label17.Location = new System.Drawing.Point(5, 338);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(100, 15);
+            this.label17.Size = new System.Drawing.Size(143, 15);
             this.label17.TabIndex = 16;
-            this.label17.Text = "Оціночна вартість";
+            this.label17.Text = "Оціночна вартість, $";
             // 
             // numericUpDown5
             // 

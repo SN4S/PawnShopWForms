@@ -60,8 +60,8 @@ namespace PawnShopFiles
             dataGridView1.Columns.Add(empCmb);
             dataGridView1.Columns.Add("type", "Тип");
             dataGridView1.Columns.Add("details", "Деталі");
-            dataGridView1.Columns.Add("asvalue", "Оц. Вартість");
-            dataGridView1.Columns.Add("price", "Ціна");
+            dataGridView1.Columns.Add("asvalue", "Оц. Вартість, $");
+            dataGridView1.Columns.Add("price", "Ціна, $");
             dataGridView1.Columns.Add("dateOfOffer", "Дата здачі");
             dataGridView1.Columns.Add("termin", "Термін(дні)");
             
