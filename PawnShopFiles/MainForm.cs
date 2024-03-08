@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PawnShopFiles
@@ -68,26 +62,45 @@ namespace PawnShopFiles
                             "Ctrl + C - Таблиця клієнтів\n" +
                             "Ctrl + E - Таблиця працівників\n" +
                             "Ctrl + H - Таблиця історії\n" +
-                            "Ctrl + P - Таблиця майна\n");
+                            "Ctrl + P - Таблиця майна\n","Інструкція");
         }
 
-        private void MainForm_KeyDown(object sender, KeyEventArgs e)
+        private void майноToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(e.KeyCode == Keys.F1) button5.PerformClick();
-            if(e.KeyCode == Keys.Escape) Close();
-            if (e.Control && e.KeyCode == Keys.C)
-            {
-                button1.PerformClick();
-            }else if (e.Control && e.KeyCode == Keys.E)
-            {
-                button2.PerformClick();
-            }else if (e.Control && e.KeyCode == Keys.H)
-            {
-                button3.PerformClick();
-            }else if (e.Control && e.KeyCode == Keys.P)
-            {
-                button4.PerformClick();
-            }else{}
+            button4.PerformClick();
+        }
+
+        private void клієнтиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            button1.PerformClick();
+        }
+
+        private void працівникиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            button2.PerformClick();
+        }
+
+        private void історіяОпераційToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            button3.PerformClick();
+        }
+
+        private void інструкціяToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            button5.PerformClick();
+        }
+
+        private void проПрограмуToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Система керування базою даних ломбарду \n" +
+                            "v.0.9\n" +
+                            "Developed with ❤️ by Ratsoi Oleksandr\n" +
+                            "2024\n","Про програму");
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            проПрограмуToolStripMenuItem.PerformClick();
         }
     }
 }

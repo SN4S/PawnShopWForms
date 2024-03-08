@@ -19,7 +19,7 @@ namespace PawnShopFiles
             _employeesList = FilesManager.ReadEmployees("employees.txt");
         }
 
-        private void AddClientButton_Click(object sender, EventArgs e)
+        private void AddEmployeeButton_Click(object sender, EventArgs e)
         {
                 var addedEmployees = _employeesList.Where(employee => employee.Phone == phoneBox.Text).ToList();
                 int lastId;

@@ -113,7 +113,7 @@ namespace PawnShopFiles
             this.AddClientButton.TabIndex = 9;
             this.AddClientButton.Text = "Додати";
             this.AddClientButton.UseVisualStyleBackColor = true;
-            this.AddClientButton.Click += new System.EventHandler(this.AddClientButton_Click);
+            this.AddClientButton.Click += new System.EventHandler(this.AddEmployeeButton_Click);
             // 
             // phoneBox
             // 

@@ -251,10 +251,5 @@ namespace PawnShopFiles
                 MessageBox.Show(@"Клієнт з таким ідентифікатором не існує","Помилка");
             }
         }
-
-        private void ClientsListForm_KeyDown(object sender, KeyEventArgs e)
-        {
-            
-        }
     }
 }

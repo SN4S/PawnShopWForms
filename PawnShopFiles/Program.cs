@@ -16,7 +16,7 @@ namespace PawnShopFiles
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PropertyForm());
+            Application.Run(new MainForm());
         }
     }
 }

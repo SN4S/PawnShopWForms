@@ -191,5 +191,24 @@ namespace PawnShopFiles
                 reload();
             }
         }
+
+        private void deleteButtton_Click(object sender, EventArgs e)
+        {
+            var addedProp = _histrory.Where(prop => prop.Id == numericUpDown2.Value).ToList();
+            if (addedProp.Count != 0)
+            {
+                if (MessageBox.Show("Ви впевнені?", "Ця дія не зворотня", MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    _histrory.RemoveAll(prop => prop.Id == numericUpDown2.Value);
+                    FilesManager.WriteHistory(_histrory, "history.txt");
+                    reload();
+                }
+            }
+            else
+            {
+                MessageBox.Show(@"Запису з таким ідентифікатором не існує","Помилка");
+            }
+        }
     }
 }
