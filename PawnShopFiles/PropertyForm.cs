@@ -246,7 +246,7 @@ namespace PawnShopFiles
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var addedProp = _propertiesList.Where(em => em.Id == numericUpDown1.Value).ToList();
+            var addedProp = _propertiesList.Where(em => em.Id == numericUpDown8.Value).ToList();
             if (addedProp.Count!=0)
             {
                 if (comboBox6.Text != "Виберіть" && comboBox7.Text != "Виберіть" && comboBox8.Text != "Виберіть" && textBox2.Text!="")

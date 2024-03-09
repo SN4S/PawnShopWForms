@@ -83,8 +83,8 @@ namespace PawnShopFiles
                     .Where(em => em.Id == Convert.ToInt32(employeesTable.CurrentRow.Cells[0].Value)).ToList();
 
                 _propertiesList.RemoveAll(prop => prop.Emp == deletedEmployee[0]);
-                employeesTable.Rows.RemoveAt(employeesTable.CurrentRow.Index);
                 FilesManager.WriteProperty(_propertiesList, "property.txt");
+                employeesTable.Rows.RemoveAt(employeesTable.CurrentRow.Index);
                 saveButton.Visible = true;
                 saveButton.PerformClick();
                 saveButton.Visible = false;

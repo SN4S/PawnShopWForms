@@ -82,9 +82,9 @@ namespace PawnShopFiles
                 var deletedClient = _clientsList
                     .Where(client => client.Id == Convert.ToInt32(clientsTable.CurrentRow.Cells[0].Value)).ToList();
 
-                _propertiesList.RemoveAll(rent => rent.Client == deletedClient[0]);
-                clientsTable.Rows.RemoveAt(clientsTable.CurrentRow.Index);
+                _propertiesList.RemoveAll(prop => prop.Client == deletedClient[0]);
                 FilesManager.WriteProperty(_propertiesList, "property.txt");
+                clientsTable.Rows.RemoveAt(clientsTable.CurrentRow.Index);
                 saveButton.Visible = true;
                 saveButton.PerformClick();
                 saveButton.Visible = false;
